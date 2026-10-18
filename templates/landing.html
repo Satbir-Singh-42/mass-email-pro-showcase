@@ -21,6 +21,7 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:site_name" content="MailFlow">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://www.mailflow.tech/">
   <meta property="og:title" content="MailFlow | Free Bulk Gmail &amp; SMTP Email Sender">
   <meta property="og:description"
@@ -50,7 +51,7 @@
     href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Nunito:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
 
-  <!-- JSON-LD Structured Data for SEO -->
+  <!-- JSON-LD Structured Data for SEO, AI Crawlers & Rich Results -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,19 +63,41 @@
         "url": "https://www.mailflow.tech/",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript and HTML5-compatible browser",
+        "softwareVersion": "2.0",
+        "sameAs": [
+          "https://github.com/Satbir-Singh-42/mass-email-pro-showcase"
+        ],
         "offers": {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD"
         },
-        "description": "Free web-based mass email sender with Google OAuth 2.0 and SMTP support. Upload Excel/CSV, personalize emails with dynamic variables, attach files, and send."
+        "description": "Free web-based mass email sender with Google OAuth 2.0 and SMTP support. Upload Excel/CSV, personalize emails with dynamic variables, attach files, and send with zero subscription fees.",
+        "featureList": [
+          "Direct Gmail OAuth 2.0 bulk email sender",
+          "Custom SMTP configuration (SSL/TLS)",
+          "In-browser Excel (.xlsx, .xls) and CSV parsing",
+          "Dynamic variable substitution (e.g. {{Name}}, {{Company}})",
+          "Per-recipient customized attachments",
+          "Real-time dispatch monitor with pause, resume, and pacing delays",
+          "Zero contact storage - 100% in-browser privacy"
+        ],
+        "author": {
+          "@type": "Person",
+          "name": "Satbir Singh",
+          "url": "https://github.com/Satbir-Singh-42"
+        }
       },
       {
         "@type": "Organization",
         "@id": "https://www.mailflow.tech/#organization",
         "name": "MailFlow",
         "url": "https://www.mailflow.tech/",
-        "logo": "https://www.mailflow.tech/static/logo.png"
+        "logo": "https://www.mailflow.tech/static/logo.png",
+        "sameAs": [
+          "https://github.com/Satbir-Singh-42/mass-email-pro-showcase"
+        ]
       }
     ]
   }
@@ -308,7 +331,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 26px 0 6px;
+      padding: 16px 0 10px;
       position: relative;
       z-index: 20;
     }
@@ -316,7 +339,7 @@
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 11px;
       text-decoration: none;
     }
 
@@ -325,37 +348,37 @@
     }
 
     .logo-badge img {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
       object-fit: cover;
       background: #fff;
-      padding: 3px;
+      padding: 2.5px;
       box-shadow: var(--shadow);
-      transform: rotate(-6deg);
+      transform: rotate(-4deg);
       transition: transform 0.3s;
     }
 
     .nav-logo:hover .logo-badge img {
-      transform: rotate(6deg) scale(1.05);
+      transform: rotate(4deg) scale(1.05);
     }
 
     .nav-logo-text {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: 24px;
+      font-size: 22px;
       letter-spacing: -0.5px;
       color: var(--ink);
       line-height: 1;
     }
 
     .nav-logo-sub {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--terra);
       font-weight: 800;
-      letter-spacing: 2px;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
-      margin-top: 3px;
+      margin-top: 2px;
     }
 
     .nav-hyphen {
@@ -409,14 +432,14 @@
     .btn-nav-cta {
       background: var(--ink);
       color: var(--cream);
-      padding: 11px 20px;
-      border-radius: 14px;
-      font-size: 14px;
+      padding: 9px 18px;
+      border-radius: 12px;
+      font-size: 13.5px;
       font-weight: 800;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       box-shadow: var(--shadow);
       transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
     }
@@ -1524,12 +1547,43 @@
     }
 
     @media (max-width: 480px) {
-      .stats-strip {
-        grid-template-columns: 1fr;
+      nav.lnav {
+        padding: 12px 0 8px;
+      }
+
+      .logo-badge img {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+      }
+
+      .nav-logo {
+        gap: 9px;
       }
 
       .nav-logo-text {
-        font-size: 20px;
+        font-size: 18px;
+      }
+
+      .nav-logo-sub {
+        font-size: 8.5px;
+        letter-spacing: 1.2px;
+      }
+
+      .btn-nav-cta {
+        padding: 7px 13px;
+        font-size: 12px;
+        border-radius: 10px;
+        gap: 5px;
+      }
+
+      .btn-nav-cta svg {
+        width: 13px !important;
+        height: 13px !important;
+      }
+
+      .stats-strip {
+        grid-template-columns: 1fr;
       }
     }
   </style>

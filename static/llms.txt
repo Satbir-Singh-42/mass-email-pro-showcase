@@ -1,0 +1,30 @@
+# MailFlow
+> Free, privacy-friendly web application for sending personalized bulk emails via Google OAuth 2.0 or custom SMTP.
+
+MailFlow (hosted at https://www.mailflow.tech) is an open-source, browser-based mass email automation tool designed for founders, recruiters, educators, and marketers. It allows users to upload contact lists (Excel `.xlsx`, `.xls` or `.csv`), define personalized template variables (such as `{{First Name}}`), attach global or recipient-specific files, and send campaigns directly through their own Gmail or SMTP accounts without subscription fees or contact limits.
+
+## Core Features
+- **Gmail OAuth 2.0 Integration**: Send directly from your verified Google account using official Google APIs. No App Passwords required.
+- **Custom SMTP Support**: Works with any SMTP provider (Amazon SES, SendGrid, Mailgun, Postmark, custom private servers).
+- **Client-Side Spreadsheet Parsing**: Reads Excel (`.xlsx`, `.xls`) and CSV files instantly in the browser using SheetJS.
+- **Dynamic Personalization**: Automatically detects columns in the uploaded file and generates variable tags like `{{Name}}`, `{{Company}}`, `{{Invoice}}` for subject and body text.
+- **Per-Recipient Attachments**: Automatically matches and attaches distinct files or PDFs to specific recipients based on spreadsheet column mappings.
+- **Privacy & Security First**: User contact lists and recipient email addresses are processed in memory and never stored in any database. OAuth tokens are stored in secure HTTP-only session cookies with strict session lifetimes.
+- **Live Dispatch Terminal**: Real-time progress tracking with pause, resume, and abort controls, pacing delay control to comply with provider rate limits, and detailed error logs.
+
+## Use Cases
+- Cold email outreach and sales prospecting
+- Candidate recruitment and interview scheduling
+- Client invoicing and payment reminders with custom PDF attachments
+- Event invitations, RSVP notifications, and community newsletters
+- Academic and club announcements
+
+## Official Links & Resources
+- Web App: https://www.mailflow.tech/app
+- Homepage: https://www.mailflow.tech/
+- Ko-fi Support: https://ko-fi.com/mailflowtech
+- GitHub Repository: https://github.com/Satbir-Singh-42/mass-email-pro-showcase
+- Documentation & Support: https://www.mailflow.tech/support
+- Privacy Policy: https://www.mailflow.tech/privacy
+- Terms of Service: https://www.mailflow.tech/terms
+

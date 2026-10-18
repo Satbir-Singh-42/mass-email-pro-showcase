@@ -6,11 +6,12 @@
   ### Modern, Browser-Based Bulk Email & Mail Merge Suite
 
   [![Production](https://img.shields.io/badge/Vercel-Live%20App-6366f1?style=for-the-badge&logo=vercel&logoColor=white)](https://www.mailflow.tech)
+  [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Project-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/mailflowtech)
   [![Google OAuth 2.0](https://img.shields.io/badge/Google-OAuth%202.0%20Verified-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://www.mailflow.tech/privacy)
   [![Python](https://img.shields.io/badge/Flask-3.x-22c55e?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
   [![Privacy](https://img.shields.io/badge/Privacy-100%25%20In--Memory-a78bfa?style=for-the-badge&logo=shield&logoColor=white)](https://www.mailflow.tech/privacy)
 
-  [**Launch App**](https://www.mailflow.tech/app) &nbsp;•&nbsp; [**Privacy Policy**](https://www.mailflow.tech/privacy) &nbsp;•&nbsp; [**Terms of Service**](https://www.mailflow.tech/terms) &nbsp;•&nbsp; [**Support & FAQs**](https://www.mailflow.tech/support)
+  [**Launch App**](https://www.mailflow.tech/app) &nbsp;•&nbsp; [**Support on Ko-fi**](https://ko-fi.com/mailflowtech) &nbsp;•&nbsp; [**Privacy Policy**](https://www.mailflow.tech/privacy) &nbsp;•&nbsp; [**Terms of Service**](https://www.mailflow.tech/terms) &nbsp;•&nbsp; [**Support & FAQs**](https://www.mailflow.tech/support)
 
 </div>
 
@@ -79,7 +80,7 @@ flowchart TD
 ### 1. Clone & Install
 ```bash
 git clone https://github.com/Satbir-Singh-42/mass-email-pro-showcase.git
-cd MASS_EMAIL_PRO
+cd mass-email-pro-showcase
 pip install -r requirements.txt
 ```
 
@@ -161,6 +162,16 @@ MailFlow is designed under a **Zero-Knowledge Architecture**:
 - **No Persistent Database**: User credentials and uploaded files are never written to disk or database tables.
 - **Session Security**: Google OAuth access tokens are stored in encrypted, HTTP-only session cookies and cleared upon exit.
 - **Compliance**: Built in strict adherence to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy).
+
+---
+
+## ☕ Support & Sponsorship
+
+MailFlow is 100% free and open-source with no advertisements or subscriptions. If this software saves you time or empowers your business, consider supporting ongoing hosting, Google API verification, and feature development!
+
+[![Buy Me A Coffee](https://storage.ko-fi.com/cdn/kofi3.png?v=3)](https://ko-fi.com/mailflowtech)
+
+👉 **Sponsor on Ko-fi:** [https://ko-fi.com/mailflowtech](https://ko-fi.com/mailflowtech)
 
 ---
 

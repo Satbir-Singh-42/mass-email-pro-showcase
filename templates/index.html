@@ -23,6 +23,7 @@
   <meta property="og:description"
     content="Send beautifully personalized mass emails using Google OAuth 2.0 or any SMTP server. Features dynamic variables, Excel/CSV parsing, and custom file attachments.">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://www.mailflow.tech/app">
   <meta property="og:image" content="https://www.mailflow.tech/static/logo.png">
   <meta property="og:image:width" content="512">
@@ -36,6 +37,37 @@
   <meta name="twitter:description"
     content="Send beautifully personalized mass emails using Google OAuth 2.0 or any SMTP server. Features dynamic variables, Excel/CSV parsing, and custom file attachments.">
   <meta name="twitter:image" content="https://www.mailflow.tech/static/logo.png">
+
+  <!-- JSON-LD Structured Data for Application & AI Discovery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "MailFlow Web App",
+    "url": "https://www.mailflow.tech/app",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript and HTML5-capable browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Bulk email dispatch via Gmail OAuth 2.0",
+      "Custom SMTP connection with TLS and SSL support",
+      "In-browser Excel (.xlsx, .xls) and CSV parsing",
+      "Dynamic variable templating",
+      "Per-recipient custom file attachments",
+      "Pacing delay and live dispatch monitoring"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Satbir Singh",
+      "url": "https://github.com/Satbir-Singh-42"
+    }
+  }
+  </script>
 
   <!-- Favicon & Apple Touch Icon -->
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
@@ -160,23 +192,19 @@
 
       <!-- STEP 1: AUTHENTICATION & SETUP -->
       <div class="step-panel active" id="panel-1">
-        <!-- Security Banner -->
-        <div class="security-banner-wrap"
-          style="display: flex; justify-content: center; margin-top: -6px; margin-bottom: -4px;">
-          <div
-            style="display: inline-flex; align-items: center; gap: 8px; background: rgba(232, 101, 74, 0.08); border: 1px solid rgba(232, 101, 74, 0.25); padding: 5px 14px; border-radius: 100px; font-size: 12px; color: var(--accent);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-            <span><strong>Secure Authentication:</strong> Connect directly via Google OAuth (No App Password needed) or
-              use standard SMTP.</span>
-          </div>
-        </div>
-
         <div class="card">
-          <!-- Auth Method Mode Switcher -->
-          <div class="card-title">Authentication Method</div>
+          <!-- Auth Method Mode Switcher Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+            <div class="card-title" style="margin-bottom: 0;">Authentication Method</div>
+            <div
+              style="display: inline-flex; align-items: center; gap: 6px; background: rgba(232, 101, 74, 0.08); border: 1px solid rgba(232, 101, 74, 0.22); padding: 3px 10px; border-radius: 100px; font-size: 11px; color: var(--accent); font-weight: 600;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Secure Authentication</span>
+            </div>
+          </div>
           <div class="auth-mode-row" style="display: flex; gap: 12px; margin-bottom: 20px;">
             <button type="button" class="auth-mode-chip active" id="modeBtnOAuth" data-mode="oauth"
               style="flex: 1; padding: 12px 16px; border-radius: 10px; border: 2px solid var(--accent); background: rgba(99, 102, 241, 0.1); color: var(--text-1); font-weight: 600; font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
@@ -791,8 +819,15 @@
       <p class="modal-desc">MailFlow is 100% free &amp; open source with zero subscriptions. If this tool saved you time
         or money, consider supporting the developer!</p>
       <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+        <a href="https://ko-fi.com/mailflowtech" target="_blank" rel="noopener"
+          class="btn btn-primary" style="text-decoration:none; justify-content:center; background:#00b9fe; border-color:#00b9fe; color:#fff;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71 1.951-1.823 4.14 1.136 4.14 1.136s2.213-3.003 4.225-1.155c.997 1.053.642 2.766-.011 3.774zm6.758-1.528c-.287 1.745-1.749 2.198-3.23 2.198v-4.996c1.378 0 3.491.13 3.23 2.798z"/>
+          </svg>
+          Support on Ko-fi
+        </a>
         <a href="https://github.com/Satbir-Singh-42/mass-email-pro-showcase" target="_blank" rel="noopener"
-          class="btn btn-primary" style="text-decoration:none; justify-content:center;">
+          class="btn btn-ghost" style="text-decoration:none; justify-content:center;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path
